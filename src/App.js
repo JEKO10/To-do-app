@@ -5,6 +5,14 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const [tasks, setTasks] = useState([]);
 
+  const deleteItem = (id) => {
+    const filterTasks = tasks.filter((item) => {
+      const index = tasks.indexOf(item);
+      return index !== id;
+    });
+    setTasks(filterTasks);
+  };
+
   return (
     <div>
       <section className="addTask">
@@ -35,7 +43,11 @@ function App() {
             <ul key={index}>
               <li>
                 {item}
-                <button>
+                <button
+                  onClick={() => {
+                    deleteItem(index);
+                  }}
+                >
                   <MdDelete />
                 </button>
               </li>
