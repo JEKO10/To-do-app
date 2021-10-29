@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { MdDelete } from "react-icons/md";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -32,7 +33,12 @@ function App() {
         {tasks.map((item, index) => {
           return (
             <ul key={index}>
-              <li>{item}</li>
+              <li>
+                {item}
+                <button>
+                  <MdDelete />
+                </button>
+              </li>
             </ul>
           );
         })}
