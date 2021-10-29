@@ -16,9 +16,13 @@ function App() {
   return (
     <div>
       <section className="addTask">
+        <h1>To Do App</h1>
         <input
           type="text"
           value={inputValue}
+          placeholder="Add task..."
+          maxLength="21"
+          autoFocus
           onChange={(e) => {
             setInputValue(e.target.value);
           }}
