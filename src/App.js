@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div>
-      <section className="add">
+      <section className="addTask">
         <input
           type="text"
           value={inputValue}
