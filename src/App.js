@@ -14,21 +14,24 @@ function App() {
             setInputValue(e.target.value);
           }}
         />
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            setTasks([...tasks, inputValue]);
-            setInputValue("");
-            console.log(tasks);
-          }}
-        >
-          ADD
-        </button>
+        {inputValue !== "" ? (
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              setTasks([...tasks, inputValue]);
+              setInputValue("");
+            }}
+          >
+            ADD
+          </button>
+        ) : (
+          ""
+        )}
       </section>
       <div className="list">
-        {tasks.map((item) => {
+        {tasks.map((item, index) => {
           return (
-            <ul>
+            <ul key={index}>
               <li>{item}</li>
             </ul>
           );
