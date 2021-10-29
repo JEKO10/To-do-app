@@ -54,6 +54,18 @@ function App() {
             </ul>
           );
         })}
+        {tasks.length !== 0 && tasks.length !== 1 ? (
+          <button
+            onClick={() => {
+              setTasks([]);
+            }}
+            id="deleteAll"
+          >
+            Delete All
+          </button>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

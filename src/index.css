@@ -28,13 +28,15 @@ body {
   border: none;
 }
 
-.addTask button {
+.addTask button,
+#deleteAll {
   font-size: 2rem;
   padding: 10px 40px;
   border-radius: 20px;
   background-color: #425363;
   color: #fff;
   border: none;
+  cursor: pointer;
 }
 
 .addTask button:focus {
@@ -64,4 +66,9 @@ ul li button {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+#deleteAll {
+  background-color: #ff0000;
+  margin-bottom: 2rem;
 }
