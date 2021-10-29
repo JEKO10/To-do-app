@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
+  const [tasks, setTasks] = useState([]);
 
   return (
     <div>
@@ -10,12 +11,29 @@ function App() {
           type="text"
           value={inputValue}
           onChange={(e) => {
-            e.preventDefault();
             setInputValue(e.target.value);
-            console.log(inputValue);
           }}
         />
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            setTasks([...tasks, inputValue]);
+            setInputValue("");
+            console.log(tasks);
+          }}
+        >
+          ADD
+        </button>
       </section>
+      <div className="list">
+        {tasks.map((item) => {
+          return (
+            <ul>
+              <li>{item}</li>
+            </ul>
+          );
+        })}
+      </div>
     </div>
   );
 }
