@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;1,400&display=swap");
+
+$primaryFont: "Work Sans", sans-serif;
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #013950;
+  color: #fff;
+  @include flex(center, center);
+  min-height: 70vh;
+  font-family: $primaryFont;
+}
+
+main {
+  background-color: #002839;
+  @include flex(center, center);
+  flex-direction: column;
+  min-width: 900px;
+  margin: 5rem auto 0;
+  padding: 20px 50px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.5);
+}
+
+.addTask {
+  margin-bottom: 2rem;
+  @include flex(space-between, center);
+  width: 100%;
+
+  input {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 75%,
+      rgba(128, 128, 128, 1) 100%
+    );
+    padding: 15px 15px 15px 20px;
+    width: 75%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.2);
+    font-family: $primaryFont;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    &:focus {
+      box-shadow: 0 0 15px #fff;
+    }
+  }
+
+  button {
+    background-color: #008d9e;
+    color: #fff;
+    padding: 15px 15px 15px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 20%;
+    font-family: $primaryFont;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.tasks {
+  width: 95%;
+
+  .task {
+    @include flex(space-between, center);
+    padding-bottom: 5px;
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+
+    button {
+      background: none;
+      color: #ff0000;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+}

@@ -19,10 +19,10 @@ function App() {
   ]);
 
   return (
-    <>
+    <main>
       <AddTask tasks={tasks} setTasks={setTasks} />
       <Tasks tasks={tasks} setTasks={setTasks} />
-    </>
+    </main>
   );
 }
 
