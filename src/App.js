@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <AddTask />
+      <AddTask tasks={tasks} setTasks={setTasks} />
       <Tasks tasks={tasks} setTasks={setTasks} />
     </>
   );
