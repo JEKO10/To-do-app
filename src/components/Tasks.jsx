@@ -1,3 +1,5 @@
+import { FiTrash2 } from "react-icons/fi";
+
 function Tasks({ tasks, setTasks }) {
   const deleteTask = (id) => {
     const filteredTasks = tasks.filter((task) => {
@@ -17,7 +19,7 @@ function Tasks({ tasks, setTasks }) {
                 deleteTask(task.id);
               }}
             >
-              Delete
+              <FiTrash2 />
             </button>
           </div>
         );

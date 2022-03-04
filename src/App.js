@@ -21,7 +21,11 @@ function App() {
   return (
     <main>
       <AddTask tasks={tasks} setTasks={setTasks} />
-      <Tasks tasks={tasks} setTasks={setTasks} />
+      {tasks.length > 0 ? (
+        <Tasks tasks={tasks} setTasks={setTasks} />
+      ) : (
+        <h1>No more tasks</h1>
+      )}
     </main>
   );
 }

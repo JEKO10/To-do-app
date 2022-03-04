@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function AddTask({ tasks, setTasks }) {
   const [query, setQuery] = useState("");
+  const input = useRef();
 
   const addTask = (text) => {
     if (!text) {
-      alert("Please Add Task");
+      input.current.placeholder = "Type something!";
+      setTimeout(() => {
+        input.current.placeholder = "New task";
+      }, 1000);
       return;
     }
 
@@ -22,6 +26,7 @@ function AddTask({ tasks, setTasks }) {
         placeholder="New Task"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        ref={input}
       />
       <button
         onClick={() => {

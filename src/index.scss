@@ -78,7 +78,15 @@ main {
 
   .task {
     @include flex(space-between, center);
-    padding-bottom: 5px;
+    background: rgb(1, 152, 136);
+    background: linear-gradient(
+      90deg,
+      rgba(1, 152, 136, 1) 75%,
+      rgba(0, 151, 136, 1) 100%
+    );
+    margin-bottom: 20px;
+    padding: 15px 30px;
+    border-radius: 20px;
 
     h1 {
       font-size: 1.5rem;
@@ -90,7 +98,7 @@ main {
       background: none;
       color: #ff0000;
       border: none;
-      font-size: 2rem;
+      font-size: 1.5rem;
       cursor: pointer;
     }
   }
