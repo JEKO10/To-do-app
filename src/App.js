@@ -7,14 +7,17 @@ function App() {
     {
       id: 0,
       text: "Make bed",
+      completed: true,
     },
     {
       id: 1,
       text: "Take a bath",
+      completed: false,
     },
     {
       id: 2,
       text: "Work out",
+      completed: false,
     },
   ]);
 
@@ -24,7 +27,7 @@ function App() {
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} setTasks={setTasks} />
       ) : (
-        <h1>No more tasks</h1>
+        <h1 style={{ color: "#008d9e" }}>No more tasks</h1>
       )}
     </main>
   );

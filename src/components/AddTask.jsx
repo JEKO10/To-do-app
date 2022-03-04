@@ -9,12 +9,12 @@ function AddTask({ tasks, setTasks }) {
       input.current.placeholder = "Type something!";
       setTimeout(() => {
         input.current.placeholder = "New task";
-      }, 1000);
+      }, 1500);
       return;
     }
 
     const id = Math.floor(Math.random() * 1000) + 1;
-    const newTask = { id, text };
+    const newTask = { id, text, completed: false };
     setTasks([...tasks, newTask]);
     setQuery("");
   };
