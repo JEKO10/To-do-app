@@ -22,7 +22,7 @@ function Tasks({ tasks, setTasks }) {
       {tasks.map((task) => {
         return (
           <div className="task" key={task.id}>
-            <h1>{task.text}</h1>
+            <h1 className={task.completed ? "completed" : ""}>{task.text}</h1>
             <div>
               <button
                 onClick={() => completedToggle(task.id)}

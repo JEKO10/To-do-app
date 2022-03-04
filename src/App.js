@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
+import Filters from "./components/Filters";
 
 function App() {
   const [tasks, setTasks] = useState([
@@ -24,6 +25,7 @@ function App() {
   return (
     <main>
       <AddTask tasks={tasks} setTasks={setTasks} />
+      <Filters tasks={tasks} setTasks={setTasks} />
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} setTasks={setTasks} />
       ) : (
