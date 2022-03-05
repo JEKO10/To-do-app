@@ -113,6 +113,18 @@ main {
       color: #ff0000;
     }
   }
+
+  .deleteAll {
+    font-family: $primaryFont;
+    background-color: #ba0f30;
+    color: #fff;
+    border: none;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
 }
 
 .filter {

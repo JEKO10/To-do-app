@@ -44,6 +44,18 @@ function Tasks({ tasks, setTasks }) {
           </div>
         );
       })}
+      {tasks.length > 2 ? (
+        <button
+          className="deleteAll"
+          onClick={() => {
+            setTasks([]);
+          }}
+        >
+          Clear All
+        </button>
+      ) : (
+        ""
+      )}
     </section>
   );
 }
