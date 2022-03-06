@@ -4,23 +4,7 @@ import Tasks from "./components/Tasks";
 import Filter from "./components/Filter";
 
 function App() {
-  const [tasks, setTasks] = useState([
-    {
-      id: 0,
-      text: "Make bed",
-      completed: true,
-    },
-    {
-      id: 1,
-      text: "Take a bath",
-      completed: false,
-    },
-    {
-      id: 2,
-      text: "Work out",
-      completed: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState([]);
   const [status, setStatus] = useState("All");
   const [filtered, setFiltered] = useState([]);
 
@@ -38,8 +22,26 @@ function App() {
     }
   };
 
+  const saveToLocal = () => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  };
+
+  const getFromLocal = () => {
+    if (localStorage.getItem("tasks") === null) {
+      localStorage.setItem("tasks", JSON.stringify([]));
+    } else {
+      const localTasks = JSON.parse(localStorage.getItem("tasks"));
+      setTasks(localTasks);
+    }
+  };
+
+  useEffect(() => {
+    getFromLocal();
+  }, []);
+
   useEffect(() => {
     filterTasks();
+    saveToLocal();
   }, [status, tasks]);
 
   return (
@@ -59,7 +61,7 @@ function App() {
           filtered={filtered}
         />
       ) : (
-        <h1 style={{ color: "#008d9e" }}>No more tasks</h1>
+        <h1 style={{ color: "#008d9e" }}>Your list is clear!</h1>
       )}
     </main>
   );
