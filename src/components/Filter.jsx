@@ -1,40 +1,25 @@
-import { useState } from "react";
-
-function Filters({ tasks, setTasks }) {
-  const [active, setActive] = useState(true);
-  const [activeCompleted, setCompleted] = useState(false);
-  const [activeUncompleted, setUncompleted] = useState(false);
+function Filters({ status, setStatus }) {
+  const statusTasks = (e) => {
+    setStatus(e.target.textContent);
+  };
 
   return (
     <section className="filter">
       <button
-        className={active ? "active" : ""}
-        onClick={() => {
-          setTasks(tasks);
-          setActive(true);
-          setCompleted(false);
-          setUncompleted(false);
-        }}
+        className={status === "All" ? "active" : ""}
+        onClick={statusTasks}
       >
         All
       </button>
       <button
-        className={activeCompleted ? "active" : ""}
-        onClick={() => {
-          setActive(false);
-          setCompleted(true);
-          setUncompleted(false);
-        }}
+        className={status === "Completed" ? "active" : ""}
+        onClick={statusTasks}
       >
         Completed
       </button>
       <button
-        className={activeUncompleted ? "active" : ""}
-        onClick={() => {
-          setActive(false);
-          setCompleted(false);
-          setUncompleted(true);
-        }}
+        className={status === "Uncompleted" ? "active" : ""}
+        onClick={statusTasks}
       >
         Uncompleted
       </button>

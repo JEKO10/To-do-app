@@ -1,7 +1,7 @@
 import { FiTrash2 } from "react-icons/fi";
 import { MdCheckBox, MdCheckBoxOutlineBlank } from "react-icons/md";
 
-function Tasks({ tasks, setTasks }) {
+function Tasks({ tasks, setTasks, status, filtered }) {
   const deleteTask = (id) => {
     const filteredTasks = tasks.filter((task) => {
       return task.id !== id;
@@ -19,7 +19,7 @@ function Tasks({ tasks, setTasks }) {
 
   return (
     <section className="tasks">
-      {tasks.map((task) => {
+      {filtered.map((task) => {
         return (
           <div className="task" key={task.id}>
             <h1 className={task.completed ? "completed" : ""}>{task.text}</h1>
@@ -44,7 +44,7 @@ function Tasks({ tasks, setTasks }) {
           </div>
         );
       })}
-      {tasks.length > 2 ? (
+      {tasks.length > 2 && status === "All" ? (
         <button
           className="deleteAll"
           onClick={() => {
