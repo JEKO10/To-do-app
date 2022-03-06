@@ -21,20 +21,28 @@ function AddTask({ tasks, setTasks }) {
 
   return (
     <section className="addTask">
-      <input
-        type="text"
-        placeholder="New Task"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        ref={input}
-      />
-      <button
-        onClick={() => {
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
           addTask(query);
         }}
       >
-        Add
-      </button>
+        <input
+          type="text"
+          placeholder="New Task"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          ref={input}
+        />
+        <button
+          type="submit"
+          onClick={() => {
+            addTask(query);
+          }}
+        >
+          Add
+        </button>
+      </form>
     </section>
   );
 }
