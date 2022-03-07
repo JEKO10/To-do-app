@@ -61,7 +61,9 @@ function App() {
           filtered={filtered}
         />
       ) : (
-        <h1 style={{ color: "#008d9e" }}>Your list is clear!</h1>
+        <h1 style={{ color: "#008d9e", textAlign: "center" }}>
+          Your list is clear!
+        </h1>
       )}
     </main>
   );

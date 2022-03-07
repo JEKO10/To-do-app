@@ -1,3 +1,60 @@
 @include mediaMediumLarge {
+  main {
+    min-width: 600px;
+  }
+}
 
+@include mediaMedium {
+  main {
+    min-width: 50vw;
+    margin: 5rem 2rem 2rem;
+  }
+
+  .filter {
+    flex-direction: column;
+    width: 80%;
+
+    button {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@include mediaMediumLow {
+  .addTask form {
+    flex-direction: column;
+
+    input {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+@include mediaSmall {
+  main {
+    padding: 20px 20px;
+    margin: 5rem 1rem 2rem;
+  }
+
+  .tasks {
+    width: 100%;
+
+    .task {
+      padding: 15px 20px;
+      flex-wrap: wrap;
+
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      button {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
