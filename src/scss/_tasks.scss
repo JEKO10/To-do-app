@@ -1,0 +1,54 @@
+.tasks {
+  width: 95%;
+
+  .task {
+    @include flex(space-between, center);
+    background: rgb(1, 152, 136);
+    background: linear-gradient(
+      90deg,
+      rgba(1, 152, 136, 1) 75%,
+      rgba(0, 151, 136, 1) 100%
+    );
+    margin-bottom: 20px;
+    padding: 15px 30px;
+    border-radius: 20px;
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-transform: capitalize;
+
+      &.completed {
+        text-decoration: line-through;
+      }
+    }
+
+    button {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    #completed {
+      color: #003000;
+      margin: 0 1rem;
+    }
+
+    #delete {
+      color: #ff0000;
+    }
+  }
+
+  .deleteAll {
+    font-family: $primaryFont;
+    background-color: #ba0f30;
+    color: #fff;
+    border: none;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}

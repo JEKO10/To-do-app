@@ -6,10 +6,6 @@ function AddTask({ tasks, setTasks }) {
 
   const addTask = (text) => {
     if (!text) {
-      input.current.placeholder = "Type something!";
-      setTimeout(() => {
-        input.current.placeholder = "New task";
-      }, 1500);
       return;
     }
 
@@ -33,9 +29,11 @@ function AddTask({ tasks, setTasks }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           ref={input}
+          autoFocus
         />
         <button
           type="submit"
+          title="Add Item"
           onClick={() => {
             addTask(query);
           }}

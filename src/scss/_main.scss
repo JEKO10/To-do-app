@@ -1,0 +1,10 @@
+main {
+  background-color: #002839;
+  @include flex(center, center);
+  flex-direction: column;
+  min-width: 900px;
+  margin: 5rem auto 0;
+  padding: 20px 50px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,42 @@
+.addTask {
+  width: 100%;
+
+  form {
+    @include flex(space-between, center);
+
+    input {
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 75%,
+        rgba(128, 128, 128, 1) 100%
+      );
+      padding: 15px 15px 15px 20px;
+      width: 75%;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.2);
+      font-family: $primaryFont;
+      font-size: 1.5rem;
+      font-weight: 500;
+
+      &:focus {
+        box-shadow: 0 0 15px #fff;
+      }
+    }
+
+    button {
+      background-color: #008d9e;
+      color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      width: 20%;
+      font-family: $primaryFont;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+}
