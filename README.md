@@ -29,7 +29,7 @@ Add, edit, remove and mark completed tasks. You can display only completed/uncom
 
 ## Live preview
 
-[Click for live preview](https://jeko10.github.io/React-to-do-app/)
+[Click for live preview](https://jeko10.github.io/To-do-app/)
 
 
 
