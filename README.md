@@ -18,7 +18,7 @@ My first CRUD app in react. You are able to add, remove, edit and filter complet
 
 ## Project overview
 
-Add, edit, remove and mark completed tasks. You can display only completed/uncompleted tasks. I used filter method for deleting and filtering completed/uncompleted tasks. After adding 3 or more tasks, button for clearing all tasks appears. I used local storage for setting and getting added tasks. Website is fully responsive.
+Add, edit, remove and mark completed tasks. You can display only completed/uncompleted tasks. I used filter method for deleting and filtering completed/uncompleted tasks. After adding 3 or more tasks, a button for clearing all tasks appears. I used local storage for setting up and getting added tasks. The website is fully responsive.
 
 ## Built with
 
@@ -30,9 +30,3 @@ Add, edit, remove and mark completed tasks. You can display only completed/uncom
 ## Live preview
 
 [Click for live preview](https://jeko10.github.io/To-do-app/)
-
-
-
-
-
-
